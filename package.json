@@ -1,0 +1,47 @@
+{
+  "name": "dsh-galaxy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "StarCraft II Galaxy Editor bridge for DeepSeek Harness: window/clipboard automation, .SC2Map MPQ read/write, Galaxy linting, and agent-authored tools",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/*.js",
+    "lib/*.mjs",
+    "scripts/*.ps1",
+    "scripts/*.py",
+    "cordis.patch.yml",
+    "README.md",
+    "USAGE.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "starcraft2",
+    "galaxy-editor",
+    "mpq"
+  ],
+  "license": "MIT"
+}

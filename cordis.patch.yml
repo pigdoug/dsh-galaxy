@@ -1,0 +1,5 @@
+# Bundle patch layer: load this package's main entry as a host plugin.
+# The host half registers the galaxy_* tools into the mounting scope.
+- insert:
+    - id: dsh-galaxy
+      name: dsh-galaxy
